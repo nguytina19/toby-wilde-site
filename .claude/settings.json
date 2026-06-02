@@ -1,0 +1,6 @@
+{
+  "deny": [
+    "Read(.env*)",
+    "Edit(.env*)"
+  ]
+}

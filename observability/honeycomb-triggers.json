@@ -1,0 +1,38 @@
+{
+  "_comment": "Honeycomb Triggers for legal-qa. Honeycomb has no Terraform module in any sibling repo, so these are authored once via the Honeycomb UI or `mcp__honeycomb__*` MCP tools and checked in here as the canonical record. To recreate after a wipe, paste each trigger into the Honeycomb UI for dataset `data-ai-enablement`. Recipients are configured in Honeycomb's integration settings, not here.",
+  "dataset": "data-ai-enablement",
+  "triggers": [
+    {
+      "name": "legal-qa: error rate spike",
+      "description": "Fires when the bot emits more than 5 error spans in 5 minutes. Catches Notion API failures, Anthropic API failures, and unhandled exceptions in event handlers.",
+      "disabled": false,
+      "query": {
+        "filters": [
+          { "column": "service.name", "op": "=", "value": "legal-qa" },
+          { "column": "error", "op": "=", "value": true }
+        ],
+        "calculations": [{ "op": "COUNT" }],
+        "time_range": 300
+      },
+      "threshold": { "op": ">", "value": 5 },
+      "frequency": 300,
+      "recipients": ["#oncall-ai-enablement"]
+    },
+    {
+      "name": "legal-qa: Bolt disconnected (no events in 30m)",
+      "description": "Fires when zero Slack events have been received in 30 minutes during business hours. If Bolt's Socket Mode session has silently died (rare; usually a probe-driven restart catches it), this is the backstop signal.",
+      "disabled": false,
+      "query": {
+        "filters": [
+          { "column": "service.name", "op": "=", "value": "legal-qa" },
+          { "column": "name", "op": "=", "value": "slack.event" }
+        ],
+        "calculations": [{ "op": "COUNT" }],
+        "time_range": 1800
+      },
+      "threshold": { "op": "<", "value": 1 },
+      "frequency": 1800,
+      "recipients": ["#oncall-ai-enablement"]
+    }
+  ]
+}
