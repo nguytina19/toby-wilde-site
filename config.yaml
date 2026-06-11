@@ -1,7 +1,0 @@
-# Marker file — presence of config.yaml identifies this directory as a deployable app.
-
-description: Legal Q&A Slack bot — fields questions from #ask-legal, drafts an answer with Claude, routes to a reviewer.
-kind: slackbot
-runtime: nextjs
-slack_app: legal-qa
-braintrust: true
