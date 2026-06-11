@@ -19,8 +19,36 @@ export function Header() {
   return (
     <header className="sticky top-0 z-50 bg-white/95 shadow-sm shadow-slate-900/5 backdrop-blur-sm">
       <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
-        <Link href="/" className="text-xl font-bold tracking-tight text-slate-900">
-          Toby Wilde
+        <Link href="/" className="flex items-center gap-2.5" aria-label="Toby Wilde — home">
+          <svg viewBox="0 0 64 64" aria-hidden="true" className="h-9 w-9 shrink-0">
+            <text
+              x="32"
+              y="29"
+              textAnchor="middle"
+              fontFamily="Georgia, 'Times New Roman', Times, serif"
+              fontSize="30"
+              fontWeight="600"
+              letterSpacing="-1"
+              fill="#0f172a"
+            >
+              T
+            </text>
+            <text
+              x="32"
+              y="56"
+              textAnchor="middle"
+              fontFamily="Georgia, 'Times New Roman', Times, serif"
+              fontSize="30"
+              fontWeight="600"
+              letterSpacing="-1"
+              fill="#0f172a"
+            >
+              W
+            </text>
+          </svg>
+          <span className="font-serif text-xl font-semibold tracking-tight text-slate-900">
+            Toby Wilde
+          </span>
         </Link>
 
         <nav className="hidden gap-1 md:flex">

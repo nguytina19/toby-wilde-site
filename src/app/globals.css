@@ -9,11 +9,14 @@
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-inter);
+  --font-serif: var(--font-fraunces);
 }
 
+/* Display headings use the serif; body/UI stays on Inter (set on <body>). */
 h1,
 h2,
 h3 {
+  font-family: var(--font-serif), Georgia, "Times New Roman", serif;
   text-wrap: balance;
 }
 

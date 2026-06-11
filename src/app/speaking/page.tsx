@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -110,14 +111,18 @@ const podcasts = [
   },
 ];
 
+// logo: path under /public/logos, or null to render a text wordmark fallback
+// until a clean asset is added. w/h are the asset's intrinsic dimensions so
+// next/image can reserve space (no layout shift). svg: bypass the image
+// optimizer, which rejects SVGs unless dangerouslyAllowSVG is enabled.
 const press = [
-  "The Times",
-  "The Independent",
-  "Property Week",
-  "Blue Bricks Magazine",
-  "Housing Technology Magazine",
-  "Bridging & Commercial Magazine",
-  "Property Industry Eye",
+  { name: "The Times", logo: "/logos/the-times.svg", w: 3758, h: 450, svg: true },
+  { name: "The Independent", logo: null },
+  { name: "Property Week", logo: null },
+  { name: "Blue Bricks Magazine", logo: "/logos/blue-bricks.png", w: 295, h: 84 },
+  { name: "Housing Technology Magazine", logo: "/logos/housing-technology.png", w: 1498, h: 723 },
+  { name: "Bridging & Commercial Magazine", logo: "/logos/bridging-commercial.svg", w: 625, h: 44, svg: true },
+  { name: "Property Industry Eye", logo: "/logos/property-industry-eye.png", w: 481, h: 150 },
 ];
 
 export default function SpeakingPage() {
@@ -238,15 +243,27 @@ export default function SpeakingPage() {
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">
               Featured In
             </h2>
-            <div className="mt-8 flex flex-wrap gap-3">
-              {press.map((pub) => (
-                <span
-                  key={pub}
-                  className="rounded-full border border-slate-200 bg-slate-50 px-4 py-2 text-sm font-medium text-slate-700"
-                >
-                  {pub}
-                </span>
-              ))}
+            <div className="mt-8 flex flex-wrap items-center gap-x-10 gap-y-6">
+              {press.map((pub) =>
+                pub.logo ? (
+                  <Image
+                    key={pub.name}
+                    src={pub.logo}
+                    alt={pub.name}
+                    width={pub.w}
+                    height={pub.h}
+                    unoptimized={pub.svg}
+                    className="h-7 w-auto max-w-[150px] object-contain opacity-60 grayscale transition duration-200 hover:opacity-100 hover:grayscale-0"
+                  />
+                ) : (
+                  <span
+                    key={pub.name}
+                    className="text-base font-semibold tracking-tight text-slate-400"
+                  >
+                    {pub.name}
+                  </span>
+                ),
+              )}
             </div>
           </div>
 

@@ -9,47 +9,33 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-2 lg:gap-16">
-            <div>
-              <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
-                PropTech &middot; Real Estate &middot; Social Impact
-              </p>
-              <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl">
-                Building lasting, well-serviced communities
-              </h1>
-              <p className="mt-6 max-w-lg text-lg leading-relaxed text-slate-500">
-                Toby Wilde, Founder of Oparo Group, is passionate about construction and the
-                building of lasting communities. From the multi-generational Milne real estate
-                family to founding the UK&rsquo;s first algorithm-driven real estate investment
-                company, Toby brings together technology, data, and purpose to deliver world-class
-                social housing.
-              </p>
-              <div className="mt-10 flex flex-wrap gap-4">
-                <Link
-                  href="/about"
-                  className="rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 active:bg-slate-700"
-                >
-                  Learn More
-                </Link>
-                <Link
-                  href="/contact"
-                  className="rounded-lg px-6 py-3 text-sm font-semibold text-slate-700 ring-1 ring-slate-300 transition-colors hover:bg-slate-50 active:bg-slate-100"
-                >
-                  Get in Touch
-                </Link>
-              </div>
-            </div>
-            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl lg:mx-0">
-              <Image
-                src="/toby.jpg"
-                alt="Toby Wilde"
-                fill
-                className="object-cover object-top"
-                sizes="(max-width: 1024px) 80vw, 40vw"
-                priority
-              />
-            </div>
+        <div className="mx-auto max-w-3xl px-6 py-20 text-center sm:py-28">
+          <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
+            PropTech &middot; Real Estate &middot; Social Impact
+          </p>
+          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl">
+            Building lasting, well-serviced communities
+          </h1>
+          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-500">
+            Toby Wilde, Founder of Oparo Group, is passionate about construction and the
+            building of lasting communities. From the multi-generational Milne real estate
+            family to founding the UK&rsquo;s first algorithm-driven real estate investment
+            company, Toby brings together technology, data, and purpose to deliver world-class
+            social housing.
+          </p>
+          <div className="mt-10 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/about"
+              className="rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 active:bg-slate-700"
+            >
+              Learn More
+            </Link>
+            <Link
+              href="/contact"
+              className="rounded-lg px-6 py-3 text-sm font-semibold text-slate-700 ring-1 ring-slate-300 transition-colors hover:bg-slate-50 active:bg-slate-100"
+            >
+              Get in Touch
+            </Link>
           </div>
         </div>
       </section>
