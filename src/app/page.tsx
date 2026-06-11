@@ -1,65 +1,154 @@
 import Image from "next/image";
+import Link from "next/link";
+import { articles } from "@/data/news";
 
 export default function Home() {
+  const latestNews = articles.slice(0, 3);
+
   return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
+    <>
+      {/* Hero */}
+      <section className="border-b border-slate-200">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid items-center gap-12 py-16 sm:py-24 lg:grid-cols-2 lg:gap-16">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
+                PropTech &middot; Real Estate &middot; Social Impact
+              </p>
+              <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl">
+                Building lasting, well-serviced communities
+              </h1>
+              <p className="mt-6 max-w-lg text-lg leading-relaxed text-slate-500">
+                Toby Wilde, Founder of Oparo Group, is passionate about construction and the
+                building of lasting communities. From the multi-generational Milne real estate
+                family to founding the UK&rsquo;s first algorithm-driven real estate investment
+                company, Toby brings together technology, data, and purpose to deliver world-class
+                social housing.
+              </p>
+              <div className="mt-10 flex flex-wrap gap-4">
+                <Link
+                  href="/about"
+                  className="rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 active:bg-slate-700"
+                >
+                  Learn More
+                </Link>
+                <Link
+                  href="/contact"
+                  className="rounded-lg px-6 py-3 text-sm font-semibold text-slate-700 ring-1 ring-slate-300 transition-colors hover:bg-slate-50 active:bg-slate-100"
+                >
+                  Get in Touch
+                </Link>
+              </div>
+            </div>
+            <div className="relative mx-auto aspect-[4/5] w-full max-w-md overflow-hidden rounded-2xl lg:mx-0">
+              <Image
+                src="/toby.jpg"
+                alt="Toby Wilde"
+                fill
+                className="object-cover object-top"
+                sizes="(max-width: 1024px) 80vw, 40vw"
+                priority
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Highlights */}
+      <section className="border-b border-slate-200 bg-slate-50">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="grid divide-y divide-slate-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+            {[
+              { stat: "£73m+", label: "Inaugural Fund Raise" },
+              { stat: "130+", label: "Homes Delivered for Vulnerable Adults" },
+              { stat: "6", label: "Award Categories in 2025" },
+            ].map((item) => (
+              <div key={item.label} className="px-6 py-10 text-center sm:py-14">
+                <p className="text-4xl font-bold tracking-tight text-slate-900" style={{ fontVariantNumeric: "tabular-nums" }}>
+                  {item.stat}
+                </p>
+                <p className="mt-2 text-sm text-slate-500">{item.label}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Latest News */}
+      <section className="py-16 sm:py-24">
+        <div className="mx-auto max-w-6xl px-6">
+          <div className="flex items-end justify-between">
+            <div>
+              <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
+                Latest
+              </p>
+              <h2 className="mt-1 text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+                News &amp; Press
+              </h2>
+            </div>
+            <Link
+              href="/news"
+              className="text-sm font-semibold text-slate-500 transition-colors hover:text-slate-900"
             >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
+              View all &rarr;
+            </Link>
+          </div>
+
+          <div className="mt-10 grid gap-8 sm:grid-cols-3">
+            {latestNews.map((article) => (
+              <Link
+                key={article.slug}
+                href={`/news/${article.slug}`}
+                className="group rounded-xl bg-white shadow-sm ring-1 ring-slate-900/5 transition-shadow hover:shadow-md"
+              >
+                <div className="relative overflow-hidden rounded-t-xl bg-slate-100">
+                  <div className="aspect-[16/9]">
+                    {article.image && (
+                      <Image
+                        src={article.image}
+                        alt={article.title}
+                        fill
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        sizes="(max-width: 640px) 100vw, 33vw"
+                      />
+                    )}
+                  </div>
+                </div>
+                <div className="p-5">
+                  <time className="text-xs font-medium uppercase tracking-wider text-slate-400">
+                    {article.date}
+                  </time>
+                  <h3 className="mt-2 text-lg font-semibold leading-snug text-slate-900 transition-colors group-hover:text-slate-600">
+                    {article.title}
+                  </h3>
+                  <p className="mt-2 line-clamp-2 text-sm leading-relaxed text-slate-500">
+                    {article.excerpt}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="border-t border-slate-200 bg-slate-50">
+        <div className="mx-auto max-w-6xl px-6 py-16 text-center sm:py-20">
+          <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
+            Interested in speaking or collaboration?
+          </h2>
+          <p className="mx-auto mt-4 max-w-lg text-slate-500">
+            Toby is available for keynotes, panels, and podcast appearances on PropTech,
+            social housing, and data-driven investment.
           </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+          <Link
+            href="/contact"
+            className="mt-8 inline-block rounded-lg bg-slate-900 px-8 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 active:bg-slate-700"
           >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+            Get in Touch
+          </Link>
         </div>
-      </main>
-    </div>
+      </section>
+    </>
   );
 }
