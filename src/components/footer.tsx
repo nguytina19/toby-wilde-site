@@ -24,7 +24,6 @@ export function Footer() {
                 { href: "/about", label: "About" },
                 { href: "/news", label: "News" },
                 { href: "/speaking", label: "Speaking" },
-                { href: "/contact", label: "Contact" },
               ].map((link) => (
                 <Link
                   key={link.href}

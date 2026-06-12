@@ -22,21 +22,6 @@ export default function Home() {
             Founder of Oparo and co-founding partner of Sprift — bringing data-driven investment
             to real estate that puts communities first.
           </p>
-          <div className="mt-7 flex flex-wrap gap-3">
-            <Link
-              href="/about"
-              className="rounded-full bg-slate-900 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 active:bg-slate-700"
-            >
-              Learn More
-            </Link>
-            <Link
-              href="/contact"
-              className="rounded-full px-6 py-2.5 text-sm font-semibold text-slate-700 ring-1 ring-slate-300 transition-colors hover:bg-slate-50 active:bg-slate-100"
-            >
-              Get in Touch
-            </Link>
-          </div>
-
           {/* Company logo strip */}
           <div className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4">
             {companies.map((company) => (
@@ -151,12 +136,12 @@ export default function Home() {
             Toby is available for keynotes, panels, and podcast appearances on PropTech,
             social housing, and data-driven investment.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href="mailto:office@tobywilde.com"
             className="mt-8 inline-block rounded-lg bg-slate-900 px-8 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 active:bg-slate-700"
           >
             Get in Touch
-          </Link>
+          </a>
         </div>
       </section>
     </>

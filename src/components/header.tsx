@@ -10,7 +10,6 @@ const navLinks = [
   { href: "/about", label: "About" },
   { href: "/news", label: "News" },
   { href: "/speaking", label: "Speaking" },
-  { href: "/contact", label: "Contact" },
 ];
 
 export function Header() {
@@ -19,7 +18,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 shadow-sm shadow-slate-900/5 backdrop-blur-sm">
-      <div className={`${container} flex h-16 items-center justify-between`}>
+      <div className={`${container} relative flex h-16 items-center justify-between`}>
         <Link href="/" className="flex items-center gap-2.5" aria-label="Toby Wilde — home">
           <svg viewBox="0 0 64 64" aria-hidden="true" className="h-9 w-9 shrink-0">
             <text
@@ -52,7 +51,7 @@ export function Header() {
           </span>
         </Link>
 
-        <nav className="hidden gap-1 md:flex">
+        <nav className="absolute left-1/2 hidden -translate-x-1/2 items-center gap-1 md:flex">
           {navLinks.map((link) => {
             const active =
               link.href === "/"
@@ -62,17 +61,26 @@ export function Header() {
               <Link
                 key={link.href}
                 href={link.href}
-                className={`rounded-md px-4 py-2 text-sm font-medium transition-colors ${
-                  active
-                    ? "bg-slate-900 text-white"
-                    : "text-slate-500 hover:bg-slate-50 hover:text-slate-900"
+                aria-current={active ? "page" : undefined}
+                className={`relative px-3 py-2 text-sm font-medium transition-colors ${
+                  active ? "text-slate-900" : "text-slate-500 hover:text-slate-900"
                 }`}
               >
                 {link.label}
+                {active && (
+                  <span className="absolute inset-x-3 -bottom-0.5 h-0.5 rounded-full bg-slate-900" />
+                )}
               </Link>
             );
           })}
         </nav>
+
+        <a
+          href="mailto:office@tobywilde.com"
+          className="hidden rounded-full bg-slate-900 px-5 py-2 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 active:bg-slate-700 md:inline-flex"
+        >
+          Get in touch
+        </a>
 
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
@@ -112,9 +120,10 @@ export function Header() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
+                  aria-current={active ? "page" : undefined}
                   className={`rounded-md px-4 py-2.5 text-sm font-medium transition-colors ${
                     active
-                      ? "bg-slate-900 text-white"
+                      ? "bg-slate-100 text-slate-900"
                       : "text-slate-600 hover:bg-slate-100 hover:text-slate-900 active:bg-slate-200"
                   }`}
                 >
@@ -122,6 +131,13 @@ export function Header() {
                 </Link>
               );
             })}
+            <a
+              href="mailto:office@tobywilde.com"
+              onClick={() => setMobileOpen(false)}
+              className="mt-2 rounded-full bg-slate-900 px-4 py-2.5 text-center text-sm font-semibold text-white transition-colors hover:bg-slate-800 active:bg-slate-700"
+            >
+              Get in touch
+            </a>
           </div>
         </nav>
       )}

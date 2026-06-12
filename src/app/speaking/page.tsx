@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import Image from "next/image";
-import Link from "next/link";
 import { press } from "@/data/press";
 import { container } from "@/lib/layout";
 
@@ -265,12 +264,12 @@ export default function SpeakingPage() {
               Available for keynotes, panels, and podcast appearances on PropTech, social
               housing, and data-driven investment.
             </p>
-            <Link
-              href="/contact"
+            <a
+              href="mailto:office@tobywilde.com"
               className="mt-6 inline-block rounded-md bg-slate-900 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-slate-800"
             >
               Get in Touch
-            </Link>
+            </a>
           </div>
         </div>
       </section>
