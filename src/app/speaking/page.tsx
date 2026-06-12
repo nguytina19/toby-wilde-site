@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { press } from "@/data/press";
+import { container } from "@/lib/layout";
 
 export const metadata: Metadata = {
   title: "Speaking",
@@ -111,25 +113,12 @@ const podcasts = [
   },
 ];
 
-// logo: path under /public/logos, or null to render a text wordmark fallback
-// until a clean asset is added. w/h are the asset's intrinsic dimensions so
-// next/image can reserve space (no layout shift). svg: bypass the image
-// optimizer, which rejects SVGs unless dangerouslyAllowSVG is enabled.
-const press = [
-  { name: "The Times", logo: "/logos/the-times.svg", w: 3758, h: 450, svg: true },
-  { name: "The Independent", logo: null },
-  { name: "Property Week", logo: null },
-  { name: "Blue Bricks Magazine", logo: "/logos/blue-bricks.png", w: 295, h: 84 },
-  { name: "Housing Technology Magazine", logo: "/logos/housing-technology.png", w: 1498, h: 723 },
-  { name: "Bridging & Commercial Magazine", logo: "/logos/bridging-commercial.svg", w: 625, h: 44, svg: true },
-  { name: "Property Industry Eye", logo: "/logos/property-industry-eye.png", w: 481, h: 150 },
-];
 
 export default function SpeakingPage() {
   return (
     <>
       <section className="border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+        <div className={`${container} py-16 sm:py-20`}>
           <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
             Events &amp; Panels
           </p>

@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { articles } from "@/data/news";
+import { container } from "@/lib/layout";
 
 export const metadata: Metadata = {
   title: "News",
@@ -11,7 +12,7 @@ export default function NewsPage() {
   return (
     <>
       <section className="border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+        <div className={`${container} py-16 sm:py-20`}>
           <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
             Press &amp; Media
           </p>
@@ -25,7 +26,7 @@ export default function NewsPage() {
       </section>
 
       <section className="bg-slate-50 py-16 sm:py-20">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className={container}>
           <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {articles.map((article) => (
               <Link

@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { container } from "@/lib/layout";
 
 const navLinks = [
   { href: "/", label: "Home" },
@@ -18,7 +19,7 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 shadow-sm shadow-slate-900/5 backdrop-blur-sm">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-6">
+      <div className={`${container} flex h-16 items-center justify-between`}>
         <Link href="/" className="flex items-center gap-2.5" aria-label="Toby Wilde — home">
           <svg viewBox="0 0 64 64" aria-hidden="true" className="h-9 w-9 shrink-0">
             <text

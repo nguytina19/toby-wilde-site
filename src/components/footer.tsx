@@ -1,9 +1,10 @@
 import Link from "next/link";
+import { container } from "@/lib/layout";
 
 export function Footer() {
   return (
     <footer className="border-t border-slate-200 bg-slate-50">
-      <div className="mx-auto max-w-6xl px-6 py-12">
+      <div className={`${container} py-12`}>
         <div className="grid gap-8 sm:grid-cols-3">
           <div>
             <h3 className="text-lg font-bold text-slate-900">Toby Wilde</h3>

@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { container } from "@/lib/layout";
 
 export const metadata: Metadata = {
   title: "Contact",
@@ -8,7 +9,7 @@ export default function ContactPage() {
   return (
     <>
       <section className="border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+        <div className={`${container} py-16 sm:py-20`}>
           <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
             Enquiries
           </p>
@@ -22,8 +23,8 @@ export default function ContactPage() {
       </section>
 
       <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-6xl px-6">
-          <div className="grid gap-12 sm:grid-cols-2">
+        <div className={container}>
+          <div className="grid max-w-5xl gap-12 sm:grid-cols-2">
             <div>
               <h2 className="text-xl font-bold text-slate-900">Contact Details</h2>
               <div className="mt-6 space-y-6">

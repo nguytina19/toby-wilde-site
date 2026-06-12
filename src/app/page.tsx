@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import { articles } from "@/data/news";
+import { companies } from "@/data/companies";
+import { container } from "@/lib/layout";
 
 export default function Home() {
   const latestNews = articles.slice(0, 3);
@@ -9,40 +11,62 @@ export default function Home() {
     <>
       {/* Hero */}
       <section className="border-b border-slate-200">
-        <div className="mx-auto max-w-3xl px-6 py-20 text-center sm:py-28">
-          <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
-            PropTech &middot; Real Estate &middot; Social Impact
-          </p>
-          <h1 className="mt-4 text-4xl font-bold leading-tight tracking-tight text-slate-900 sm:text-5xl">
-            Building lasting, well-serviced communities
+        <div className={`${container} flex min-h-[calc(100svh-4rem)] flex-col justify-end pb-10 pt-24`}>
+          <h1 className="font-serif text-4xl font-normal leading-[0.95] tracking-tight text-slate-900 sm:text-5xl lg:text-6xl">
+            Toby Wilde
           </h1>
-          <p className="mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-500">
-            Toby Wilde, Founder of Oparo Group, is passionate about construction and the
-            building of lasting communities. From the multi-generational Milne real estate
-            family to founding the UK&rsquo;s first algorithm-driven real estate investment
-            company, Toby brings together technology, data, and purpose to deliver world-class
-            social housing.
+          <p className="font-serif text-4xl font-normal leading-[0.95] tracking-tight text-[#7e8ca2] sm:text-5xl lg:text-6xl">
+            PropTech entrepreneur
           </p>
-          <div className="mt-10 flex flex-wrap justify-center gap-4">
+          <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600">
+            Founder of Oparo and co-founding partner of Sprift — bringing data-driven investment
+            to real estate that puts communities first.
+          </p>
+          <div className="mt-7 flex flex-wrap gap-3">
             <Link
               href="/about"
-              className="rounded-lg bg-slate-900 px-6 py-3 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 active:bg-slate-700"
+              className="rounded-full bg-slate-900 px-6 py-2.5 text-sm font-semibold text-white shadow-sm transition-colors hover:bg-slate-800 active:bg-slate-700"
             >
               Learn More
             </Link>
             <Link
               href="/contact"
-              className="rounded-lg px-6 py-3 text-sm font-semibold text-slate-700 ring-1 ring-slate-300 transition-colors hover:bg-slate-50 active:bg-slate-100"
+              className="rounded-full px-6 py-2.5 text-sm font-semibold text-slate-700 ring-1 ring-slate-300 transition-colors hover:bg-slate-50 active:bg-slate-100"
             >
               Get in Touch
             </Link>
+          </div>
+
+          {/* Company logo strip */}
+          <div className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4">
+            {companies.map((company) => (
+              <div key={company.name} className="flex items-center gap-2.5">
+                {company.logo && (
+                  <Image
+                    src={company.logo}
+                    alt={company.name}
+                    width={company.w}
+                    height={company.h}
+                    unoptimized={company.svg}
+                    className={`h-7 w-auto max-w-[130px] object-contain${
+                      company.invert ? " invert" : ""
+                    }`}
+                  />
+                )}
+                {!company.wordmark && (
+                  <span className="text-base font-semibold tracking-tight text-slate-700">
+                    {company.name}
+                  </span>
+                )}
+              </div>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Highlights */}
       <section className="border-b border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className={container}>
           <div className="grid divide-y divide-slate-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             {[
               { stat: "£73m+", label: "Inaugural Fund Raise" },
@@ -62,7 +86,7 @@ export default function Home() {
 
       {/* Latest News */}
       <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-6xl px-6">
+        <div className={container}>
           <div className="flex items-end justify-between">
             <div>
               <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
@@ -119,7 +143,7 @@ export default function Home() {
 
       {/* CTA */}
       <section className="border-t border-slate-200 bg-slate-50">
-        <div className="mx-auto max-w-6xl px-6 py-16 text-center sm:py-20">
+        <div className={`${container} py-16 text-center sm:py-20`}>
           <h2 className="text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">
             Interested in speaking or collaboration?
           </h2>

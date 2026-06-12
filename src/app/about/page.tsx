@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { container } from "@/lib/layout";
 
 export const metadata: Metadata = {
   title: "About",
@@ -9,7 +10,7 @@ export default function AboutPage() {
   return (
     <>
       <section className="border-b border-slate-200">
-        <div className="mx-auto max-w-6xl px-6 py-16 sm:py-20">
+        <div className={`${container} py-16 sm:py-20`}>
           <p className="text-sm font-semibold uppercase tracking-widest text-slate-400">
             Background
           </p>
@@ -23,8 +24,8 @@ export default function AboutPage() {
       </section>
 
       <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-5xl px-6">
-          <div className="flex flex-col items-start gap-10 md:flex-row md:gap-14">
+        <div className={container}>
+          <div className="flex max-w-5xl flex-col items-start gap-10 md:flex-row md:gap-14">
             <div className="w-full shrink-0 md:w-64 lg:w-72">
               <div className="relative aspect-[4/5] overflow-hidden rounded-xl">
                 <Image
