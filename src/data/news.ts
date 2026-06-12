@@ -602,13 +602,6 @@ export const articles: Article[] = [
     ],
   },
   {
-    slug: "venture-property-podcast-interview",
-    date: "June 23, 2019",
-    title: "Venture Property Podcast Interview",
-    excerpt: "Toby Wilde interview on the Venture Property Podcast.",
-    image: "/news/venture-property.jpg",
-  },
-  {
     slug: "what-are-housing-policies-of-tory-leadership-candidates",
     date: "June 23, 2019",
     title: "What Are Housing Policies of Tory Leadership Candidates?",
