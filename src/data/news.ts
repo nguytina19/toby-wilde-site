@@ -25,6 +25,16 @@ export const articles: Article[] = [
     excerpt:
       "Oparo and Toby Wilde recognised across multiple categories at the Property Week Innovation Awards 2025, marking a milestone moment in our mission to redefine how technology, data, and purpose-driven investment shape the future of real estate.",
     image: "/news/property-week-innovation.jpg",
+    body: [
+      "Oparo and Toby Wilde Recognised Across Multiple Categories at the Property Week Innovation Awards 2025",
+      "Oparo has been recognised as a finalist across five major categories at this year’s Property Week Innovation Awards 2025, marking a milestone moment in our mission to redefine how technology, data, and ESG principles shape the housing sector.",
+      "These nominations highlight Oparo’s commitment to building a smarter, more equitable housing ecosystem. Our technology platforms — Oparo REACT and Oparo RAM — combine advanced data analytics, AI, and financial insight to streamline acquisition, development, and management across residential portfolios. The result: homes that perform better financially, operationally, and socially.",
+      "The Affordable Housing Innovation and AI in Property categories showcase our dedication to creating scalable, tech-led models that help local authorities and housing associations deliver more with less — making affordability and innovation not mutually exclusive, but interdependent.",
+      "Meanwhile, being shortlisted for Fintech Solution of the Year and Residential Innovation in PropTech recognises our integration of financial intelligence with real estate performance — a true blend of proptech and fintech designed to bridge investors and communities through measurable, sustainable impact.",
+      "Finally, the Outstanding Achievement nomination for Toby Wilde celebrates a vision built on resilience, creativity, and purpose. From founding Oparo to driving an ecosystem that merges profitability with social responsibility, this recognition speaks to leadership rooted in action, not theory.",
+      "“Innovation in housing shouldn’t just be about technology. It’s about re-engineering systems to serve people better — and proving that ESG, data, and design can co-exist with strong commercial outcomes.”",
+      "As we continue to grow, Oparo remains focused on scaling solutions that support our partners — local government, registered providers, and investors — in creating lasting, meaningful change across the housing landscape.",
+    ],
   },
   {
     slug: "lifeproven-podcast-toby-wilde-scaling-supported-housing",
@@ -110,6 +120,15 @@ export const articles: Article[] = [
     excerpt:
       "Oparo has been named Social Impact Investor of the Year 2024 at the UK Financial Awards by SME News. This recognition marks more than a milestone — it reflects a belief we've held from the start that technology and empathy can coexist to create sustainable housing solutions.",
     image: "/news/uk-finance-awards.jpg",
+    body: [
+      "Oparo Wins Social Impact Investor of the Year 2024",
+      "This recognition marks more than a milestone — it reflects a belief we’ve held since day one: that technology, data, and purpose can transform how real estate delivers value for people and communities.",
+      "At Oparo, investment is not an end in itself; it’s a tool for systemic change. Through our proprietary REACT (Real Estate and Computer Technology) and RAM (Remote Asset Management) platforms, we’ve built a data-driven framework that redefines how assets are identified, managed, and maintained across the Private Rented Sector (PRS) and social housing.",
+      "Our partnerships with not-for-profit registered providers and local authorities are a cornerstone of this mission. Together, we’re creating homes that are more affordable, more efficient, and more aligned with resident well-being — all while maintaining commercial discipline and transparency for our investors.",
+      "This award belongs to the Oparo team , whose relentless focus on precision, performance, and purpose has kept us ahead of the curve; to our investors , who believe in a smarter, fairer housing model; and to our partners , who work with us every day to push boundaries in one of the UK’s most challenging sectors.",
+      "The housing landscape is at a critical juncture — affordability, sustainability, and social outcomes can no longer be treated as separate conversations. Innovation is not optional. It’s the bridge between impact and investment.",
+      "We’re proud to be part of that bridge. And we’re only getting started.",
+    ],
   },
   {
     slug: "celebrating-esg-edge-2024-recognition-that-matters",
@@ -215,6 +234,9 @@ export const articles: Article[] = [
     excerpt:
       "Oparo Social featured in Blue Bricks Magazine, highlighting our approach to data-driven social housing investment.",
     image: "/news/blue-bricks.jpg",
+    body: [
+      "Oparo Social Win Social Housing Investor of the Year! How Oparo Social is Revolutionizing Social Housing with Industry Titans",
+    ],
   },
   {
     slug: "oparo-social-win-social-housing-investor-of-the-year",
@@ -237,6 +259,9 @@ export const articles: Article[] = [
     excerpt:
       "A very special May event as PIP London turns 5. The team over at The Dickins Inn, St Catherine's Dock put together their very special 5th birthday event with an amazing line-up.",
     image: "/news/pip-birthday.jpg",
+    body: [
+      "A very special May event as PIP London turns 5 🎉🥳 The team over at The Dickins Inn, St Catherine’s Dock are putting the finishing touches, to their very special, 𝟓𝐭𝐡 𝐛𝐢𝐫𝐭𝐡𝐝𝐚𝐲 𝐞𝐯𝐞𝐧𝐭, on Thursday 16th May and what an amazing line-up they have in store for us: Mark Turner COO of The Housing Network, sharing his knowledge, on a subject close to his heart – the future of social housing AND Toby Wilde of Oparo Group speaking about his passion – providing homes for vulnerable adults. All this and updates from our legal, financial and insurance partners, in addition to lots of networking opportunities, lunch and, not forgetting our renowned and expert-led round table sessions. There may even be a few glasses of whatever takes your fancy, on the patio, as those all important conversations continue downstairs in the bar, into the early evening. Come and join us now on the link below 👇 https://lnkd.in/efhc2aAc Partners in Property London – a real property networking community, in the heart of the city! hashtag#propertyinvestinglondon hashtag#propertynetworkinglondon hashtag#propertydevelopment hashtag#propertycommunity hashtag#propertygoals",
+    ],
   },
   {
     slug: "oparo-social-nominated-for-best-social-housing-investor",
@@ -245,6 +270,9 @@ export const articles: Article[] = [
     excerpt:
       "Oparo Social nominated as finalists for the 'Progressive Social Housing Investor' at The HMO Awards 23/24.",
     image: "/news/hmo-awards.png",
+    body: [
+      "Good luck to our finalists for the 🏆 ‘PROGESSIVE SOCIAL HOUSING INVESTOR’ for The HMO Awards 23/24! 🙏Thanks to Judge, Sue Sims for your help with this category. 👏 Well done and good luck to all 5 applicants who have made it onto the shortlist! ⭐ AF Property Investment – Aston H. ⭐ Omnia Group – Sam Patel 💥 ⭐ Oparo Group Social – Toby Wilde , Jack Jiggens & Ben Richards ⭐ The HMO Professionals – Ian Bluck ⭐ Yellow Homes – Janice James & Thomas Reed This event is organised by COHO , The “Property Management Software of Choice” and a special mention to our 💫 Lead Sponsor Octane Capital . 🎟️👉 Go to https://hmoawards.com to BOOK YOUR TICKETS – don’t wait, there aren’t many left!",
+    ],
   },
   {
     slug: "the-big-social-housing-debate",
@@ -267,6 +295,9 @@ export const articles: Article[] = [
     excerpt:
       "In this episode of The Supported Living Property Podcast, Toby Wilde explains how he is working with institutional lenders to develop supported and social housing, sharing practical advice for property investors.",
     image: "/news/supported-living-podcast.jpg",
+    body: [
+      "In this episode of The Supported Living Property Podcast Toby Wilde explains how he is working with institutional lenders to develop supported and social housing. He shares his experience of developing supported living property in London and gives great practical advice for property investors about developing and investing in property for supported living",
+    ],
   },
   {
     slug: "oparo-social-nominated-for-impact-investor-award",
@@ -275,6 +306,10 @@ export const articles: Article[] = [
     excerpt:
       "Oparo Social nominated for the Best Progressive Social Housing Investor at the HMO awards 2022. Fantastic recognition for the entire Oparo Social team.",
     image: "/news/oparo-social-nominated.jpg",
+    body: [
+      "Oparo Social have been nominated for the Best Progressive Social Housing Investor at the HMO awards 2022.",
+      "This recognition is fantastic recognition for the entire Oparo Social team and all the hard work put into delivering high quality supported housing with design inspired inspired by psychologically informed principles.",
+    ],
   },
   {
     slug: "top-101-london-real-estate-investment-startups-companies",
@@ -291,6 +326,12 @@ export const articles: Article[] = [
     excerpt:
       "Proud to have taken part in the Partners in Property Live Conference 2022 in Solihull. Covered the Social and Supported Housing space, dealing with local authorities and housing associations, and growing a portfolio sustainably.",
     image: "/news/pip-live-2022.jpg",
+    body: [
+      "I am very proud to have taken part in the Partners in Property Live Conference 2022 in Solihull.",
+      "The other panelists were Will Mallard, Amy Varle and Michael Patterson. We covered the Social and Supported Housing space, dealing with local authorities and housing associations, growing Institutional interests, motivations of providers and the barriers to entry.",
+      "With my Oparo Social hat on I discussed the appeal and pain points from an Investors point of view, and why it is such a rewarding space to be operating.",
+      "I hope those in attendance found our panel insightful and were motivated. Supported housing can have a  positive impact on people through the provision of high quality accommodation.",
+    ],
   },
   {
     slug: "competitive-dealmaking-in-uk-property-will-mallard-interviews-toby-wilde-and-jay",
@@ -323,6 +364,9 @@ export const articles: Article[] = [
     excerpt:
       "2 New Transactions. 119 Units In Legals or Under Construction. £120m to Deploy in The Right Deals. £300m of Assets Flagged by Our Algorithm.",
     image: "/news/oparo-q2.jpg",
+    body: [
+      "In Q2 2021 Oparo Group have continued its success as a PropTech driven Real Estate Investment house in the following ways:",
+    ],
   },
   {
     slug: "property-data-panel-the-property-investor-show-2021",
@@ -338,6 +382,10 @@ export const articles: Article[] = [
     title: "Prepare for Heated Debates at This Year's Property Investor Show",
     excerpt: "PropTech Founders Panel Debate at The Property Investor Show.",
     image: "/news/heated-debates.jpg",
+    body: [
+      "Delighted to be announced as a panelist on Using Property Data To Improve Investment Outcomes . I will be alongside some other very exciting PropTech Founders.",
+      "I hope I can bring the perspective of a PropTech powered Investor and how the right data can give a competitive advantage.",
+    ],
   },
   {
     slug: "trading-suspended-with-reverse-takeover-by-sprift-in-works",
@@ -346,6 +394,10 @@ export const articles: Article[] = [
     excerpt:
       "The London Stock Exchange has suspended trading in Immedia Group plc from AIM with the announcement of an agreement for the reverse takeover of Immedia by Sprift Technologies Limited.",
     image: "/news/sprift-takeover.jpg",
+    body: [
+      "The London Stock Exchange has suspended trading in Immedia Group plc from the Alternative Investment Market (AIM:IME) with the announcement of an agreement for the reverse takeover of Immedia by Sprift Technologies Limited.",
+      "In preparation for the reverse takeover,  Immedia has entered into a £900,000 loan agreement with Sprift, and announced the intended issue of £35,000,000 worth of new shares.",
+    ],
   },
   {
     slug: "property-people-podcast-with-saam-lowni",
@@ -354,6 +406,13 @@ export const articles: Article[] = [
     excerpt:
       "Meet Toby Wilde, Founder of PropTech firm Oparo, believed to be the first REACT Investment house in the UK. Toby comes from a third-generation family business focused on property development and construction.",
     image: "/news/property-people-podcast.jpg",
+    body: [
+      "On this episode of Property People, we meet Toby Wilde, Founder of PropTech firm Oparo, believed to be the first REACT Investment house in the UK.",
+      "Toby comes from a third-generation family business that focused on property development and construction and has also carved his own path in the industry. Following the 2008 global financial crisis, Toby specialised in the high-volume lettings and management sector, working for London’s John Hollingsworth and Kinleigh, Folkard & Hayward.",
+      "After rising to a senior position, Toby then launched his own boutique agency in 2010. As a developer and a development consultant, he has contributed to numerous projects with a combined GDV of over £18m.",
+      "Toby was also one of the founders of Sprift.com, a revolutionary property data aggregating platform, which became one of the U.K’s largest centralised property data platforms.",
+      "He regularly comments on industry trends and speaks at events about real estate, developments and investment.",
+    ],
   },
   {
     slug: "oparo-group-q1-roundup",
@@ -362,6 +421,11 @@ export const articles: Article[] = [
     excerpt:
       "5 Transactions Completed Totalling 33 Units. 8 Assets in Legals Totalling 39 units. 2 Refurbishments Completed. In-House Algorithm & Appraisal system progress.",
     image: "/news/oparo-q1.jpg",
+    body: [
+      "A fantastic start to the year from the Oparo Group and its Partners, we are pleased to announce this progress in our Q1 2021 update:",
+      "In-House Algorithm & Appraisal Platform Completed.",
+      "Joint-Venture Established To Deliver £40m Portfolio Over the next 14 months.",
+    ],
   },
   {
     slug: "property-sisters-2021-property-predictions-interview-with-toby-wilde",
@@ -378,6 +442,9 @@ export const articles: Article[] = [
     excerpt:
       "14 Units Acquired. 94 Unit Pipeline in Legals. 2 Construction Projects Started. Capital Under Advisory Increased to £122m. 1 Loan Completed.",
     image: "/news/oparo-q4-2020.jpg",
+    body: [
+      "14 Units Acquired 94 Unit Pipeline in Legals 2 Construction Projects Started Capital Under Advisory Increased to £122m. 1 Loan Completed Global Family Office Summit 2020 announce Toby Wilde as a Panelist Property Sisters 2021 Property Predictions Interview with Toby Wilde",
+    ],
   },
   {
     slug: "global-family-office-summit-2020-toby-wilde-as-panelist",
@@ -402,6 +469,14 @@ export const articles: Article[] = [
     excerpt:
       "Discussed the common myths around how and whether PropTechs can solve housing market problems. A controversial episode with ADHD in full flow.",
     image: "/news/return-podcast.jpg",
+    body: [
+      "Just released an episode of #thereturnpodcast with Anna Clare Harper , It's definitely one of my more controversial ones and my #ADHD is in full flow! 🙂",
+      "We discussed the common myths around how and whether #proptechs can solve housing market problems.",
+      "- What problems can #proptech (and specifically, #algorithms ) really solve in the UK #property market, and how?",
+      "- How #data can really be used to optimise where to build and what is built, from a #propertydevelopers and #propertyinvestors perspective",
+      "- What data reveals about a collapse in studio and 1 bed values, due to Covid-led limits on the airbnb ‘dark economy’",
+      "- The idea of a ‘barcode for every house’ and how tech can reduce inefficiencies in the housing market",
+    ],
   },
   {
     slug: "focus-on-why-podcast-evolution-of-data-with-toby-wilde",
@@ -410,6 +485,13 @@ export const articles: Article[] = [
     excerpt:
       "Toby Wilde shares why he works at the intersection of real estate and technology, and the vision behind OPARO, a REACT firm which is algorithm-based, people-driven and has real estate investment at its heart.",
     image: "/news/focus-on-why.jpg",
+    body: [
+      "Toby Wilde has a vision for the future of real estate which is why he founded OPARO a Real Estate and Computer Technology (REACT) firm which is algorithm-based, people-driven and has real estate investment at its heart.",
+      "In this Focus on WHY podcast episode, Toby shares WHY he works in the PropTech sector and why he is disrupting and redefining both investment and finance methodology in the UK Real Estate market using proprietary technology. For Toby, it is this evolution of data and algorithms that will drive future real estate investment decisions.",
+      "Toby addresses the importance of due diligence, trust, innovation and future-proofing. He also talks of how building the business with the right people around him will allow it to scale quickly.",
+      "Recently Toby was asked what Oparo does and he wrote a post to provide clarity behind the offerings of Oparo to avoid being deemed esoteric. I believe this podcast helps to explain further not only what Oparo provides but also WHY it has been founded.",
+      "“Don't force yourself to be an entrepreneur. Don't force yourself to be something you're not. Be resilient and never be afraid to keep on getting back up and keep on fighting the good fight. The most important thing you can have is resilience.”",
+    ],
   },
   {
     slug: "react-private-equity-firm-raises-73m",
@@ -490,6 +572,13 @@ export const articles: Article[] = [
     excerpt:
       "Discussed how property investors can use data and algorithms to drive better decisions, identify more profitable opportunities, safeguard against risk and drive efficiency.",
     image: "/news/return-podcast.jpg",
+    body: [
+      "We discussed how #propertyinvestors can use #data and #algorithms to drive better decisions, identify more profitable opportunities, safeguard against #risk and drive #efficiency",
+      "Using data, one of the most valuable resources in #property, to make better #investment decisions",
+      "How identifying the early signs of #insolvency and #financial stress can give #homeowners a quick and dignified exit",
+      "The #evolution of #proptech - and Proptech Version 4.0",
+      "Why property is a human-led industry that can’t be ruled by data alone",
+    ],
   },
   {
     slug: "where-next-for-proptech",
@@ -498,6 +587,19 @@ export const articles: Article[] = [
     excerpt:
       'It is broadly recognised that PropTech is in its third phase. "PropTech" is evidently going through a renaissance and is becoming a highly desirable investment opportunity for both Venture Capitalists and Angels.',
     image: "/news/where-next-proptech.jpg",
+    body: [
+      "It is broadly recognised that PropTech is in its third phase. This raises the question, what's next for this virgin sector?",
+      "“PropTech” is evidently going through a renaissance and is becoming a highly desirable investment opportunity for both Venture Capitalists and Angels. Forbes has put PropTech investment in 2018 at $12bn globally versus $1.9bn in 2017 and $518m in 2013.",
+      "In the U.K SEIS and EIS (Seed & Enterprise Investment Scheme) has undoubtedly helped get the sector off the ground but does not account for all the hype and interest. This leads to the question whether this will be the next dot-com bubble or mania such as cryptocurrencies and blockchain. In the summer of 2017 I enjoyed lunch with an influential player within the alternative finance sector, and he told me at the time he could raise money for margarine yogurts if you attached the word blockchain to the offering ! Is PropTech going the same way?",
+      "With my background firmly rooted in the real estate rather than the technology camp, I know of companies offering solutions to improve real estate that which I believe are ineffective and unrealistic. They are often solving problems that simply don’t exist. These Ideas are concocted by people who either lack the sector experience or fail acknowledge the subtle nuances of the industry. To view real estate as one industry rather than many symbiotic interlinking sub sectors is surely misguided. However I have seen some ideas that are bang on the money and are now being adopted en masse.",
+      "PropTech 1.0 was the online listing property portals such as PrimeLocation, RightMove, Zoopla and FindAProperty.",
+      "PropTech 2.0 was the CRM systems used by estate agents such as Jupix and Reapit. Digital Signatures and online booking sites such as AirBnB. I’m tempted to include the early days of open data and Online/Hybrid agencies but for me they came later.",
+      "PropTech 3.0 is ongoing but consists of expansive open data platforms such as Sprift and Datscha, PlaceTech such as Matterport and Blockchain/tokenizing real estate assets such as Hip.property. We also saw the rapid scaling (and often decline) of online estate agents and hybrids such as PurpleBricks and Emoov.",
+      "My experience of founding and scaling a PropTech 3.0 SSAS (Sprift - an early property data aggregation platform), has led me to the conclusion that big data and algorithms are the future of PropTech, whilst PlaceTech can help visualise and make buildings sexy or easier to view.",
+      "My view is that PropTech 4.0 will feature companies such as Nested who use their place data and algorithms to make an instant buyout offer for properties, resulting in maximum internal profitability. Companies like Oparo, who use big data and algorithms to make informed, intelligent investment decisions U.K. wide, are the future. Scaling a PropTech on a subscription basis is a long hard, labour intensive slog with low value tickets.",
+      "I do not believe that PropTech has the potential to be a mania, as it is underwritten by one of the largest asset classes, and one of the slowest assets to innovate. It does however have the potential to be a bubble. Using data and information for an edge to trade or invest, will produce the highest returns which is why in my opinion, the application of big data and algorithms for real estate acquisition, optimisation and investment is the next revolution in PropTech. I’m very proud that Oparo is at the forefront of this latest evolution in the UK.",
+      "Toby Wilde is the founder of Oparo, the first Algorithm driven real estate investment firm. A founding partner of Sprift.com the property data platform, a Property Developer and ex Estate Agent. Toby is always happy to share ideas on PropTech, talk Oparo or real estate in general, Please feel free to contact",
+    ],
   },
   {
     slug: "venture-property-podcast-interview",
