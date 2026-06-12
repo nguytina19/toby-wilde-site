@@ -40,7 +40,13 @@ export default function NewsPage() {
                       src={article.image}
                       alt={article.title}
                       fill
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      className={`object-cover transition-transform duration-300 group-hover:scale-105 ${
+                        article.imageWidth &&
+                        article.imageHeight &&
+                        article.imageHeight > article.imageWidth
+                          ? "object-[50%_18%]"
+                          : ""
+                      }`}
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                   )}

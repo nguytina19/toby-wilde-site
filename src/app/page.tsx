@@ -16,11 +16,13 @@ export default function Home() {
             Toby Wilde
           </h1>
           <p className="font-serif text-4xl font-normal leading-[0.95] tracking-tight text-[#7e8ca2] sm:text-5xl lg:text-6xl">
-            PropTech entrepreneur
+            British Entrepreneur
           </p>
           <p className="mt-6 max-w-xl text-base leading-relaxed text-slate-600">
-            Founder of Oparo and co-founding partner of Sprift — bringing data-driven investment
-            to real estate that puts communities first.
+            A PropTech pioneer and neurodiverse entrepreneur, Toby is Founder of Oparo, the
+            UK&rsquo;s first algorithm-driven real estate company, and Founding Partner of
+            Sprift. Bridging enterprise and social impact through investment, mentorship, and
+            public speaking.
           </p>
           {/* Company logo strip */}
           <div className="mt-12 flex flex-wrap items-center gap-x-7 gap-y-4">
@@ -103,7 +105,13 @@ export default function Home() {
                         src={article.image}
                         alt={article.title}
                         fill
-                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        className={`object-cover transition-transform duration-300 group-hover:scale-105 ${
+                          article.imageWidth &&
+                          article.imageHeight &&
+                          article.imageHeight > article.imageWidth
+                            ? "object-[50%_18%]"
+                            : ""
+                        }`}
                         sizes="(max-width: 640px) 100vw, 33vw"
                       />
                     )}

@@ -66,19 +66,86 @@ export default async function ArticlePage({
 
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-4xl px-6">
-          {article.image && (
-            <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-lg bg-slate-100">
+          {article.image &&
+            (article.imageWidth && article.imageHeight ? (
               <Image
                 src={article.image}
                 alt={article.title}
-                fill
-                className="object-cover"
-                sizes="(max-width: 896px) 100vw, 896px"
+                width={article.imageWidth}
+                height={article.imageHeight}
+                priority
+                className="mx-auto mb-10 max-h-[600px] w-auto rounded-lg bg-slate-100 object-contain"
               />
-            </div>
-          )}
+            ) : (
+              <div className="relative mb-10 aspect-[16/9] overflow-hidden rounded-lg bg-slate-100">
+                <Image
+                  src={article.image}
+                  alt={article.title}
+                  fill
+                  className="object-cover"
+                  sizes="(max-width: 896px) 100vw, 896px"
+                />
+              </div>
+            ))}
           <div className="max-w-none space-y-5">
-            {article.body ? (
+            {article.blocks ? (
+              article.blocks.map((block, i) => {
+                if (block.type === "heading") {
+                  return (
+                    <h2
+                      key={i}
+                      className="pt-6 font-serif text-2xl font-semibold tracking-tight text-slate-900"
+                    >
+                      {block.text}
+                    </h2>
+                  );
+                }
+                if (block.type === "list") {
+                  return (
+                    <ul
+                      key={i}
+                      className="ml-5 list-disc space-y-1.5 text-base leading-relaxed text-slate-600 marker:text-slate-300"
+                    >
+                      {block.items.map((item, j) => (
+                        <li key={j}>{item}</li>
+                      ))}
+                    </ul>
+                  );
+                }
+                if (block.type === "image") {
+                  return (
+                    <figure key={i} className="py-2">
+                      <div className="relative aspect-[16/9] overflow-hidden rounded-lg bg-slate-100">
+                        <Image
+                          src={block.src}
+                          alt={block.alt ?? ""}
+                          fill
+                          className="object-cover"
+                          sizes="(max-width: 896px) 100vw, 896px"
+                        />
+                      </div>
+                      {block.caption && (
+                        <figcaption className="mt-2 text-sm text-slate-400">
+                          {block.caption}
+                        </figcaption>
+                      )}
+                    </figure>
+                  );
+                }
+                return (
+                  <p
+                    key={i}
+                    className={
+                      i === 0
+                        ? "text-lg leading-relaxed text-slate-600"
+                        : "text-base leading-relaxed text-slate-600"
+                    }
+                  >
+                    {block.text}
+                  </p>
+                );
+              })
+            ) : article.body ? (
               <>
                 {article.body.map((paragraph, i) => (
                   <p

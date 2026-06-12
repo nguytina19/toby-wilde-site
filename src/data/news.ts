@@ -3,13 +3,28 @@ export interface ExternalLink {
   url: string;
 }
 
+// Rich article content. `blocks` lets an article interleave headings and
+// images with paragraphs; simpler articles still use the flat `body` array.
+export type ArticleBlock =
+  | { type: "heading"; text: string }
+  | { type: "paragraph"; text: string }
+  | { type: "list"; items: string[] }
+  | { type: "image"; src: string; alt?: string; caption?: string };
+
 export interface Article {
   slug: string;
   date: string;
   title: string;
   excerpt: string;
   image?: string;
+  // Intrinsic image dimensions. When set, the article hero shows the image at
+  // its natural aspect ratio (height-capped) instead of a forced 16:9 crop —
+  // important for portrait photos. Card thumbnails stay 16:9 but use these to
+  // pick a face-friendly crop position.
+  imageWidth?: number;
+  imageHeight?: number;
   body?: string[];
+  blocks?: ArticleBlock[];
   externalLinks?: ExternalLink[];
 }
 
@@ -18,6 +33,81 @@ export function getArticleBySlug(slug: string): Article | undefined {
 }
 
 export const articles: Article[] = [
+  {
+    slug: "six-nominations-one-win-a-decade-of-reinventing-housing",
+    date: "December 22, 2026",
+    title: "Six Nominations. One Win. A Decade of Reinventing Housing.",
+    excerpt:
+      "Recognised across six categories at the Property Week Tech Innovation Awards 2025 — and winning FinTech Solution of the Year — Toby Wilde reflects on a decade spent building an integrated model that combines capital, technology and housing.",
+    image: "/news/six-nominations-decade.jpg",
+    imageWidth: 1600,
+    imageHeight: 1200,
+    blocks: [
+      { type: "paragraph", text: "At the Property Week Tech Innovation Awards 2025, Oparo Social was recognised in six categories, won FinTech Solution of the Year, and I was personally shortlisted for Outstanding Achievement. In the weeks that followed, the question people kept putting to me was what all of it actually meant." },
+      { type: "paragraph", text: "To me it meant the industry had finally caught up with something we set out to build a decade ago. The recognition went well beyond any single product or transaction; it pointed to the slow work of assembling a system that brings capital, technology and housing together under one roof — the kind of thing that simply didn’t exist when we started." },
+      { type: "heading", text: "The Problem Nobody Was Solving" },
+      { type: "paragraph", text: "The housing sector I walked into was badly fragmented. Property companies looked after assets, software firms built tools, investors chased returns, and social organisations tracked outcomes. Everyone tended to their own corner, and almost no one was joining those corners up." },
+      { type: "paragraph", text: "Housing has always been more tangled than that. It sits at the intersection of finance, operations, regulation, technology and the lives of the people who actually live in the homes, and very few were building anything that could hold all of it in view at once. That was the opening we went after." },
+      { type: "heading", text: "Building What Didn’t Exist" },
+      { type: "paragraph", text: "We were building data infrastructure, automation, predictive analytics and decision engines years before anyone was talking about AI. The thinking behind it was fairly plain: the future of housing would turn on information and the quality of decisions as much as on bricks and mortar, so that is where we put our effort." },
+      { type: "paragraph", text: "That work eventually became our own technology, REACT and RAM, which can analyse hundreds of millions of data points spanning acquisitions, asset performance, maintenance, compliance, resident outcomes and investment returns. Somewhere along the way we helped define what people now call algorithm-driven real estate investing, putting the frameworks and methodologies in place well before the field filled up with companies describing themselves as innovators. The aim through all of it stayed the same: better decisions, made at scale." },
+      { type: "heading", text: "Why FinTech Matters" },
+      { type: "paragraph", text: "The FinTech win caught a few people off guard, given that Oparo is known for housing. At its core, though, fintech comes down to how capital gets allocated, and that is precisely the problem we work on. Every acquisition, every investment call, every risk assessment and operational intervention is really a decision about where money should go." },
+      { type: "paragraph", text: "Our technology exists to make those calls sharper, moving capital more intelligently while keeping measurable social impact and financial performance in the same frame. Seen that way, the award sat far closer to the heart of what we do than the surprise suggested." },
+      { type: "heading", text: "Individual Recognition" },
+      { type: "paragraph", text: "The Outstanding Achievement shortlist mattered to me for reasons that have little to do with personal recognition. Entrepreneurship tends to be read backwards, through the headlines, the awards, the growth and the deals. What rarely shows up in that picture is the long stretch of building before anyone is paying attention, along with the failures, the changes of direction and the sheer stubbornness it takes to make something new actually work." },
+      { type: "paragraph", text: "For me, the nomination acknowledged a decade of conviction and a willingness to question received wisdom and build the thing people kept insisting couldn’t be built." },
+      { type: "heading", text: "Six Categories. One Theme." },
+      { type: "paragraph", text: "Lined up side by side, the six nominations — Best Use of AI in Property, Best Affordable Housing Innovation, Residential PropTech Innovation, Specialist Developer of the Year, Outstanding Achievement and FinTech Solution of the Year — start to look less like separate accolades and more like one argument made six different ways. Each of them points back to the same conviction: that housing performs better when technology, capital and operations are designed as a single system. That idea has guided Oparo from the very first day." },
+      { type: "heading", text: "The Future Is Bigger Than Housing" },
+      { type: "paragraph", text: "What we are building now reaches well past real estate. The same principles can tighten infrastructure investment, give impact measurement more rigour, and reshape how capital moves through entire economies. A new category is taking shape somewhere between fintech, proptech, artificial intelligence and impact investing, and my honest sense is that we are still near the beginning of it." },
+      { type: "heading", text: "Looking Forward" },
+      { type: "paragraph", text: "Awards are worth something, though they were never the point. What they tell me is that a way of working once treated as unconventional is quietly becoming the norm. The mission has not shifted: build better systems, allocate capital more intelligently, lean on technology to improve decisions, and keep proving that financial returns and social outcomes do their best work together." },
+      { type: "paragraph", text: "From here, the next chapter begins." },
+      { type: "paragraph", text: "Toby Wilde" },
+      { type: "paragraph", text: "Founder, Oparo Social" },
+    ],
+  },
+  {
+    slug: "oparo-esg-edge-awards-2025",
+    date: "November 19, 2025",
+    title: "Oparo Highly Commended at the Property Week ESG Edge Awards 2025",
+    excerpt:
+      "Oparo was Highly Commended in both ESG Developer of the Year and ESG Investor of the Year at the Property Week ESG Edge Awards 2025 — recognition of a career spent proving that social impact and investment performance belong together.",
+    image: "/news/oparo-esg-edge-awards.png",
+    imageWidth: 1672,
+    imageHeight: 941,
+    blocks: [
+      { type: "paragraph", text: "At the Property Week ESG Edge Awards 2025, Oparo earned recognition in two categories — ESG Developer of the Year and ESG Investor of the Year — with Toby Wilde, Founder of Oparo Social, behind the work in both." },
+      { type: "paragraph", text: "For Toby, that recognition carries more weight than any single result. It reflects years spent improving housing outcomes, pushing back on conventional approaches to asset management, and showing that strong social impact and strong investment performance can be built together rather than traded off against each other." },
+      { type: "paragraph", text: "We were glad to be named alongside such a strong field across both categories." },
+
+      { type: "heading", text: "ESG Developer of the Year finalists" },
+      { type: "list", items: ["Oparo Social (Highly Commended)", "Muse", "Related Argent", "Thriving Investments"] },
+
+      { type: "heading", text: "ESG Investor of the Year finalists" },
+      { type: "list", items: ["Oparo Social (Highly Commended)", "Bridges Fund Management", "Legal & General Investment Management", "Octopus Real Estate"] },
+
+      { type: "heading", text: "Why recognition in both categories matters" },
+      { type: "paragraph", text: "Being recognised across both development and investment means a great deal to Toby, because it mirrors a conviction that has run through his whole career. The two are usually treated as separate disciplines with separate goals, yet he has long argued that they are bound tightly together." },
+      { type: "paragraph", text: "The choices made when acquiring, funding, improving, managing and operating homes shape resident outcomes, asset quality and long-term returns all at once. Seeing housing as one connected lifecycle, where every decision carries consequences for both people and performance, has defined his approach for years — and being recognised in both categories is, in a sense, an acknowledgement of that wider view." },
+
+      { type: "heading", text: "What Toby has built" },
+      { type: "paragraph", text: "Much of Toby’s work has gone into finding better ways to understand, manage and improve housing assets. Frustrated by the limits of traditional reporting and scattered data, he led the development of internal systems such as REACT and RAM, built to give real-time visibility across portfolios and operations so decisions could be made faster, accountability held more firmly, and problems caught earlier." },
+      { type: "paragraph", text: "The aim was always practical: give teams tools that improve operational performance, lift the resident experience and protect long-term asset value. That emphasis on transparency, accountability and steady improvement now sits at the centre of how Oparo operates." },
+
+      { type: "heading", text: "ESG in practice" },
+      { type: "paragraph", text: "Toby has always treated ESG as a question of outcomes rather than labels. Frameworks, policies and reporting standards matter, but their worth comes down to whether they actually change anything on the ground. In practice that means asking some fairly direct questions:" },
+      { type: "list", items: ["Are homes safe, secure and well maintained?", "Are they energy efficient and affordable to run?", "Are residents seeing better housing outcomes?", "Is capital being allocated responsibly and effectively?", "Are maintenance programmes proactive rather than reactive?", "Are assets becoming more resilient over time?", "Are environmental impacts falling in measurable ways?", "Are governance processes improving accountability and transparency?", "Are investment decisions supporting long-term social value?", "Are providers creating sustainable outcomes for the communities they serve?"] },
+      { type: "paragraph", text: "To Toby, the answers to those questions are what ultimately drives investment performance, which is why they sit at the heart of how the business is run." },
+
+      { type: "heading", text: "Looking ahead" },
+      { type: "paragraph", text: "As the industry matures, Toby sees ESG becoming embedded in everyday business decisions instead of sitting off to one side as a standalone exercise. He finds that encouraging, because real progress tends to accumulate through the countless small choices made across acquisition, investment, development, management and operations." },
+      { type: "paragraph", text: "Recognition across both categories is a welcome marker of how far the work has come. For Toby, though, the attention stays fixed on what comes next: better housing outcomes, capital deployed responsibly, stronger operational systems, and a continued case that long-term value appears when social impact and investment performance move in the same direction." },
+      { type: "paragraph", text: "Toby Wilde" },
+      { type: "paragraph", text: "Founder, Oparo Social" },
+    ],
+  },
   {
     slug: "oparo-finalists-property-innovation-awards-2025",
     date: "October 23, 2025",
