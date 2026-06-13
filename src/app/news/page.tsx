@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { articles } from "@/data/news";
-import { press } from "@/data/press";
 import { container } from "@/lib/layout";
+import { LogosCarousel } from "@/components/logos-carousel";
 
 export const metadata: Metadata = {
   title: "News",
@@ -23,6 +23,14 @@ export default function NewsPage() {
           <p className="mt-4 max-w-xl text-slate-500">
             Awards, press coverage, podcast appearances, and company updates.
           </p>
+          <div className="mt-10">
+            <p className="text-xs font-semibold uppercase tracking-widest text-slate-400">
+              Featured In
+            </p>
+            <div className="mt-6">
+              <LogosCarousel />
+            </div>
+          </div>
         </div>
       </section>
 
@@ -65,35 +73,6 @@ export default function NewsPage() {
                 </div>
               </Link>
             ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Featured In */}
-      <section className="border-t border-slate-200 py-16 sm:py-20">
-        <div className={container}>
-          <h2 className="text-2xl font-bold tracking-tight text-slate-900">Featured In</h2>
-          <div className="mt-8 flex flex-wrap items-center gap-x-10 gap-y-6">
-            {press.map((pub) =>
-              pub.logo ? (
-                <Image
-                  key={pub.name}
-                  src={pub.logo}
-                  alt={pub.name}
-                  width={pub.w}
-                  height={pub.h}
-                  unoptimized={pub.svg}
-                  className="h-7 w-auto max-w-[150px] object-contain opacity-60 grayscale transition duration-200 hover:opacity-100 hover:grayscale-0"
-                />
-              ) : (
-                <span
-                  key={pub.name}
-                  className="text-base font-semibold tracking-tight text-slate-400"
-                >
-                  {pub.name}
-                </span>
-              ),
-            )}
           </div>
         </div>
       </section>
