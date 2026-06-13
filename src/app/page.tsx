@@ -56,9 +56,9 @@ export default function Home() {
         <div className={container}>
           <div className="grid divide-y divide-slate-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             {[
-              { stat: "£73m+", label: "Inaugural Fund Raise" },
+              { stat: "£550m", label: "Co-Raised for Social Impact" },
+              { stat: "£50m", label: "Supported Housing Delivered" },
               { stat: "130+", label: "Homes Delivered for Vulnerable Adults" },
-              { stat: "6", label: "Award Categories in 2025" },
             ].map((item) => (
               <div key={item.label} className="px-6 py-10 text-center sm:py-14">
                 <p className="text-4xl font-bold tracking-tight text-slate-900" style={{ fontVariantNumeric: "tabular-nums" }}>
