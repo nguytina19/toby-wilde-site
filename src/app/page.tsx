@@ -22,7 +22,8 @@ export default function Home() {
             A PropTech pioneer and neurodiverse entrepreneur, Toby is Founder of Oparo, the
             UK&rsquo;s first algorithm-driven real estate company, and Founding Partner of
             Sprift. A third-generation member of the Milne Group property family, he bridges
-            enterprise and social impact through investment, mentorship, and public speaking.
+            enterprise and social impact through angel investment, mentorship, and public
+            speaking.
           </p>
           <p className="mt-4 max-w-xl text-sm leading-relaxed text-slate-500">
             Across a <span className="font-semibold text-slate-800">20+ year career</span>, he has
