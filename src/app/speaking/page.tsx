@@ -112,6 +112,16 @@ const podcasts = [
   },
 ];
 
+const topics = [
+  "Property Technology (PropTech)",
+  "Real Estate Investment",
+  "Development",
+  "Property Strategies",
+  "Family Offices",
+  "Entrepreneurialism",
+  "Resilience",
+  "Real Estate Economics / Policy",
+];
 
 export default function SpeakingPage() {
   return (
@@ -132,51 +142,65 @@ export default function SpeakingPage() {
       </section>
 
       <section className="py-16 sm:py-24">
-        <div className={container}>
-          <div className="max-w-3xl">
-          {/* About Speaking */}
-          <div className="mb-16 space-y-4 text-base leading-relaxed text-slate-600">
-            <p>
-              Toby considers public speaking events, panel contributions and roundtables in
-              the U.K. and across Europe.
-            </p>
-            <p>
-              Toby likes speaking on topics including Property Technology (PropTech), Real
-              Estate Investment, Development, Property Strategies, Family Offices,
-              Entrepreneurialism, Resilience and Real Estate Economics / Policy.
-            </p>
-            <p>
-              Toby offers this service for free for most events, as he is a big believer in
-              self improvement and the sharing of knowledge and ideas.
-            </p>
-            <p>
-              When a fee is appropriate, particularly for commercial events such as
-              continued professional development, education courses, Television or Radio,
-              Toby requests the consideration be donated to a charity of his choice.
-            </p>
-            <p className="font-medium text-slate-700">
-              For availability email:{" "}
-              <a
-                href="mailto:office@tobywilde.com"
-                className="text-slate-900 underline underline-offset-2"
-              >
-                Office@TobyWilde.com
-              </a>
-            </p>
+        <div className={`${container} space-y-20`}>
+          {/* Overview + Topics */}
+          <div className="grid gap-x-16 gap-y-10 lg:grid-cols-2">
+            <div className="space-y-4 text-base leading-relaxed text-slate-600">
+              <p>
+                Toby considers public speaking events, panel contributions and roundtables in
+                the U.K. and across Europe.
+              </p>
+              <p>
+                Toby offers this service for free for most events, as he is a big believer in
+                self improvement and the sharing of knowledge and ideas.
+              </p>
+              <p>
+                When a fee is appropriate, particularly for commercial events such as
+                continued professional development, education courses, Television or Radio,
+                Toby requests the consideration be donated to a charity of his choice.
+              </p>
+              <p className="font-medium text-slate-700">
+                For availability email:{" "}
+                <a
+                  href="mailto:office@tobywilde.com"
+                  className="text-slate-900 underline underline-offset-2"
+                >
+                  Office@TobyWilde.com
+                </a>
+              </p>
+            </div>
+            <div>
+              <h2 className="text-sm font-semibold uppercase tracking-widest text-slate-400">
+                Speaking Topics
+              </h2>
+              <div className="mt-5 flex flex-wrap gap-2.5">
+                {topics.map((topic) => (
+                  <span
+                    key={topic}
+                    className="rounded-full bg-slate-100 px-4 py-2 text-sm font-medium text-slate-700"
+                  >
+                    {topic}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
 
           {/* Conferences & Panels */}
-          <div>
+          <div className="border-t border-slate-200 pt-16">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">
               Conferences &amp; Panels
             </h2>
-            <div className="mt-8 divide-y divide-slate-200">
+            <div className="mt-6 divide-y divide-slate-200">
               {conferences.map((item, i) => (
-                <div key={i} className="flex gap-6 py-5">
-                  <span className="shrink-0 text-sm font-semibold text-slate-400">
+                <div
+                  key={i}
+                  className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:gap-10"
+                >
+                  <span className="w-14 shrink-0 text-sm font-semibold text-slate-400">
                     {item.year}
                   </span>
-                  <div>
+                  <div className="sm:flex-1">
                     {item.url ? (
                       <a
                         href={item.url}
@@ -189,25 +213,30 @@ export default function SpeakingPage() {
                     ) : (
                       <p className="font-semibold text-slate-900">{item.event}</p>
                     )}
-                    <p className="mt-1 text-sm text-slate-500">{item.topic}</p>
                   </div>
+                  <p className="text-sm leading-relaxed text-slate-500 sm:flex-1">
+                    {item.topic}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Podcasts */}
-          <div className="mt-16">
+          <div className="border-t border-slate-200 pt-16">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">
               Podcast Appearances
             </h2>
-            <div className="mt-8 divide-y divide-slate-200">
+            <div className="mt-6 divide-y divide-slate-200">
               {podcasts.map((item, i) => (
-                <div key={i} className="flex gap-6 py-5">
-                  <span className="shrink-0 text-sm font-semibold text-slate-400">
+                <div
+                  key={i}
+                  className="flex flex-col gap-1 py-5 sm:flex-row sm:items-baseline sm:gap-10"
+                >
+                  <span className="w-14 shrink-0 text-sm font-semibold text-slate-400">
                     {item.year}
                   </span>
-                  <div>
+                  <div className="sm:flex-1">
                     {item.url ? (
                       <a
                         href={item.url}
@@ -220,15 +249,17 @@ export default function SpeakingPage() {
                     ) : (
                       <p className="font-semibold text-slate-900">{item.show}</p>
                     )}
-                    <p className="mt-1 text-sm text-slate-500">{item.topic}</p>
                   </div>
+                  <p className="text-sm leading-relaxed text-slate-500 sm:flex-1">
+                    {item.topic}
+                  </p>
                 </div>
               ))}
             </div>
           </div>
 
           {/* Press */}
-          <div className="mt-16">
+          <div className="border-t border-slate-200 pt-16">
             <h2 className="text-2xl font-bold tracking-tight text-slate-900">
               Featured In
             </h2>
@@ -257,11 +288,11 @@ export default function SpeakingPage() {
           </div>
 
           {/* CTA */}
-          <div className="mt-16 rounded-lg bg-slate-50 p-8 text-center">
+          <div className="rounded-2xl bg-slate-50 p-8 text-center sm:p-12">
             <h3 className="text-lg font-bold text-slate-900">
               Interested in booking Toby for an event?
             </h3>
-            <p className="mt-2 text-sm text-slate-500">
+            <p className="mx-auto mt-2 max-w-md text-sm text-slate-500">
               Available for keynotes, panels, and podcast appearances on PropTech, social
               housing, and data-driven investment.
             </p>
@@ -271,7 +302,6 @@ export default function SpeakingPage() {
             >
               Get in Touch
             </a>
-          </div>
           </div>
         </div>
       </section>
