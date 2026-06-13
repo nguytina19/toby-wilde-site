@@ -88,7 +88,7 @@ export default function AboutPage() {
               </p>
 
               <p>
-                Across his career, Toby has completed 30 property developments, with his work
+                Across his career, Toby has completed 30+ property developments, with his work
                 shortlisted across 24 industry award categories.
               </p>
 
