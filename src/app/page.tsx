@@ -61,11 +61,12 @@ export default function Home() {
       {/* Highlights */}
       <section className="border-b border-slate-200 bg-slate-50">
         <div className={container}>
-          <div className="grid divide-y divide-slate-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
+          <div className="grid grid-cols-2 divide-x divide-y divide-slate-200 sm:grid-cols-4 sm:divide-y-0">
             {[
               { stat: "£500m", label: "Co-Raised for Social Impact" },
               { stat: "£50m", label: "Supported Housing Delivered" },
               { stat: "30+", label: "Property Developments Completed" },
+              { stat: "100+", label: "Homes Delivered for Vulnerable Adults" },
             ].map((item) => (
               <div key={item.label} className="px-6 py-10 text-center sm:py-14">
                 <p className="text-4xl font-bold tracking-tight text-slate-900" style={{ fontVariantNumeric: "tabular-nums" }}>
