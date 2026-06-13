@@ -87,6 +87,11 @@ export default function AboutPage() {
                 vulnerable adults in London.
               </p>
 
+              <p>
+                Across his career, Toby has completed 30 property developments, with his work
+                shortlisted across 24 industry award categories.
+              </p>
+
               <p className="font-medium text-slate-700">
                 A regular speaker at events and writer on PropTech, real estate and real
                 estate economics.
