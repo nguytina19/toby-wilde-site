@@ -63,7 +63,7 @@ export default function Home() {
         <div className={container}>
           <div className="grid divide-y divide-slate-200 sm:grid-cols-3 sm:divide-x sm:divide-y-0">
             {[
-              { stat: "£550m", label: "Co-Raised for Social Impact" },
+              { stat: "£500m", label: "Co-Raised for Social Impact" },
               { stat: "£50m", label: "Supported Housing Delivered" },
               { stat: "130+", label: "Homes Delivered for Vulnerable Adults" },
             ].map((item) => (
