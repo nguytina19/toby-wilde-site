@@ -132,7 +132,8 @@ export default function SpeakingPage() {
       </section>
 
       <section className="py-16 sm:py-24">
-        <div className="mx-auto max-w-4xl px-6">
+        <div className={container}>
+          <div className="max-w-3xl">
           {/* About Speaking */}
           <div className="mb-16 space-y-4 text-base leading-relaxed text-slate-600">
             <p>
@@ -270,6 +271,7 @@ export default function SpeakingPage() {
             >
               Get in Touch
             </a>
+          </div>
           </div>
         </div>
       </section>
