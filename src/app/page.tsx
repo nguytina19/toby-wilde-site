@@ -65,7 +65,7 @@ export default function Home() {
             {[
               { stat: "£500m", label: "Co-Raised for Social Impact" },
               { stat: "£50m", label: "Supported Housing Delivered" },
-              { stat: "130+", label: "Homes Delivered for Vulnerable Adults" },
+              { stat: "30", label: "Property Developments Completed" },
             ].map((item) => (
               <div key={item.label} className="px-6 py-10 text-center sm:py-14">
                 <p className="text-4xl font-bold tracking-tight text-slate-900" style={{ fontVariantNumeric: "tabular-nums" }}>
