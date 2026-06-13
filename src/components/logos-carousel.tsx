@@ -62,6 +62,7 @@ function LogoMark({ pub }: { pub: PressOutlet }) {
       height={pub.h}
       unoptimized={pub.svg}
       className="h-8 w-auto max-w-[150px] object-contain grayscale"
+      style={pub.scale ? { transform: `scale(${pub.scale})` } : undefined}
     />
   );
 }
